@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Dur-e-sitar — customized modest abayas, online ordering, and our story." />
+  <title>About us | Dur-e-sitar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="announcement" role="region" aria-label="Promotion">
+    <p><strong>New season drop</strong> — free size help on WhatsApp · fast nationwide delivery</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img class="logo-img" src="images/logo-dure-sitar.svg" width="44" height="44" alt="" />
+        <span class="logo-wrap">
+          <span class="logo-text">Dur-e-sitar</span>
+          <span class="logo-tagline">where modesty meets elegance</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main menu">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu-sub">
+          <span class="sr-only">Menu</span>
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu-sub" class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#collection">Shop</a></li>
+          <li><a href="index.html#how-we-work">How we work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-btn" href="index.html#collection" aria-label="Browse collection to add to bag">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12z" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+          <path d="M6 6L5 3H2" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-legal">
+    <div class="container legal-inner">
+      <h1>About us</h1>
+      <p class="legal-lead"><strong>Dur-e-sitar</strong> is owned and run by <strong>Shanza Ali Khan</strong>. We design and source beautifully tailored abayas with a focus on honest quality, modern silhouettes, and fabrics that feel as good as they look.</p>
+      <p>We are an <strong>online-only</strong> business — there is no walk-in store. Every order starts with a conversation on <strong>WhatsApp</strong>, where we help with sizes, lengths, colours, and delivery across Pakistan.</p>
+      <h2>What we care about</h2>
+      <ul>
+        <li>Custom lengths and sizing notes when you need them</li>
+        <li>Wedding, Eid, and everyday styles</li>
+        <li>Bulk or school orders by arrangement</li>
+      </ul>
+      <p><a href="index.html#collection">Browse the collection</a> or <a href="contact.html">contact us</a> anytime.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wide">
+      <div class="footer-top">
+        <a class="footer-brand-block" href="index.html#top">
+          <img class="footer-logo-img" src="images/logo-dure-sitar.svg" width="48" height="48" alt="" />
+          <div>
+            <span class="footer-logo-text">Dur-e-sitar</span>
+            <span class="footer-logo-tag">Wear your identity with elegance</span>
+          </div>
+        </a>
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h3 class="footer-heading">Explore</h3>
+            <ul class="footer-list">
+              <li><a href="index.html#collection">Shop</a></li>
+              <li><a href="index.html#how-we-work">How we work</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">Legal</h3>
+            <ul class="footer-list">
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="terms.html">Terms &amp; conditions</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">WhatsApp</h3>
+            <p class="footer-note">Orders &amp; sizing help</p>
+            <a class="footer-wa" href="https://wa.me/923126827562" rel="noopener">0312-6827562</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Dur-e-sitar · Owned by Shanza Ali Khan · Online store — Pakistan delivery</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    (function () {
+      var t = document.querySelector(".nav-toggle");
+      var m = document.getElementById("nav-menu-sub");
+      if (t && m) {
+        t.addEventListener("click", function () {
+          var open = m.classList.toggle("is-open");
+          t.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        m.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            m.classList.remove("is-open");
+            t.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
