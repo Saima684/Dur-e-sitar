@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saima684.github.io/Dur-e-sitar/sitemap.xml
